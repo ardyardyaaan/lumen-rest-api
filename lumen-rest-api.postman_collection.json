@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "39cdba4f-6761-4f64-9a9b-2411a98e2d42",
+		"name": "lumen-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6634792"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id_card\": \"3271031811960081\",\n    \"name\": \"Muchamad Ardiansyah\",\n    \"phone\": \"0812909100961\",\n    \"email\": \"ardyardyaaan1@gmail.com\",\n    \"address\": \"Bogor Tengah\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ardyardyaaan@gmail.com\",\n    \"otp\": 906477\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
